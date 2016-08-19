@@ -29,11 +29,11 @@ public class BallPane extends Pane{
 		ft.setAutoReverse(true);
 		// Create an animation for moving the ball
 		animation = new Timeline(
-		new KeyFrame(Duration.millis(10), e -> {
+		new KeyFrame(Duration.millis(50), e -> {
 			System.err.println(animation.getRate());
 			moveBall();
 		}));
-		//animation.setCycleCount(Timeline.INDEFINITE);
+		animation.setCycleCount(Timeline.INDEFINITE);
 		
 		animation.play();
 		ft.play();
