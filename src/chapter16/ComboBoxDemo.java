@@ -1,6 +1,5 @@
 package chapter16;
 
-import org.omg.PortableInterceptor.USER_EXCEPTION;
 
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -11,7 +10,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Region;
 import javafx.stage.Stage;
 
 public class ComboBoxDemo extends Application{
@@ -73,7 +71,10 @@ public class ComboBoxDemo extends Application{
 		cbo.setValue(flagTitles[0]);
 		
 		ObservableList<String> items = FXCollections.observableArrayList(flagTitles);
+		//cbo.setItems(items);
 		cbo.getItems().addAll(items);
+		cbo.setVisibleRowCount(3);
+		
 		pane.setCenter(descriptionPane);
 		
 		cbo.setEditable(true);
