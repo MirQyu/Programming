@@ -44,7 +44,7 @@ public class MultipleBounceBall extends Application{
 		});
 		
 		
-		HBox hbox = new HBox(5);
+		HBox hbox = new HBox(10);
 		hbox.getChildren().addAll(btAdd, btSub);
 		hbox.setAlignment(Pos.CENTER);
 		
@@ -111,15 +111,23 @@ public class MultipleBounceBall extends Application{
 			// TODO Auto-generated method stub
 			for (Node node : getChildren()) {
 				Ball ball = (Ball)node;
+				boolean isChangeColor = false;
 				if (ball.getCenterX() < ball.getRadius() ||
 						ball.getCenterX() > getWidth() - ball.getRadius()) {
 					// 为什么能访问？
+					// 好像是因为 内部类的原因哦
 					ball.dx *= -1;
+					isChangeColor = true;
 				}
 				if (ball.getCenterY() < ball.getRadius() ||
 						ball.getCenterY() > getHeight() - ball.getRadius()) {
 					ball.dy *= -1;
+					isChangeColor = true;
 				}
+				
+//				if (isChangeColor) {
+//					ball.setFill(Color.color(Math.random(), Math.random(), Math.random(), 0.5));
+//				}
 				
 				// Adjust ball position
 				ball.setCenterX(ball.dx + ball.getCenterX());
@@ -136,5 +144,7 @@ public class MultipleBounceBall extends Application{
 			this.setFill(color);
 		}
 	}
+	
 }
+
 

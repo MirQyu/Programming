@@ -3,8 +3,6 @@ package chapter13;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 public class Exercise13_4 {
 	static MyCalendar calendar = new MyCalendar();
 	

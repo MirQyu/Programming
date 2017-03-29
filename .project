@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/chapter23/Exercise23_02.java</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Downloads/evennumberedexercise/Exercise23_02.java</locationURI>
+		</link>
+		<link>
+			<name>src/chapter23/Exercise23_10.java</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Downloads/evennumberedexercise/Exercise23_10.java</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
